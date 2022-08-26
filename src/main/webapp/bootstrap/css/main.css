@@ -1,0 +1,117 @@
+/*===========================================================================================================
+ * main.less v0.1.0
+ * Author:Bone
+ * 2014/12/19
+ *==========================================================================================================*/
+/* global */
+* {
+	font-family: "微软雅黑";
+}
+
+.container {
+	width: 100%;
+	min-width: 500px;
+	max-width: none !important;
+}
+
+.row {
+	margin: 0px;
+}
+
+.pagination {
+	margin: 5px;
+}
+
+input[type='file']:focus,input[type='radio']:focus,input[type='checkbox']:focus,a:focus
+	{
+	outline: none;
+}
+
+.panel {
+	margin-right: 20px;
+}
+/*top nav bar*/
+.sw-navbar {
+	min-height: 30px;
+	height: 30px;
+	width: 100%;
+	z-index: 99999;
+}
+
+.sw-navbar .navbar-brand {
+	height: 30px;
+	padding: 5px;
+}
+
+.sw-navbar .navbar-nav {
+	float: right;
+	display: block;
+	margin-right: 20px;
+}
+
+.sw-navbar .navbar-nav>li {
+	float: left;
+}
+
+.sw-navbar .navbar-nav>li>a {
+	height: 30px;
+	padding: 5px;
+}
+
+.main-content {
+	width: 100%;
+	margin-top: 35px;
+	margin-bottom: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+	min-height: 650px;
+}
+
+.main-content .sidebar {
+	position: fixed;
+	width: 200px;
+	display: block;
+	float: left;
+	padding-left: 5px;
+}
+
+.main-content .sidebar .submenu {
+	font-size: 12px;
+	padding-left: 15px;
+}
+
+.main-content .workspace {
+	margin-left: 205px;
+	margin-right: auto;
+}
+
+.sw-footer {
+	width: 100%;
+	min-height: 20px;
+}
+
+.login-panel {
+	width: 400px;
+	margin: 200px auto;
+	opacity: 0.9;
+	background: #818F98;
+	box-shadow:0 0 20px rgba(0, 100, 200, 1);
+}
+
+.login-body {
+	background-image: url("../../img/loginbg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	 text-align:center;
+}
+
+.login-text {
+	margin: 20px;
+	width: 360px;
+}
+
+.login-inputcode {
+	width: 150px;
+	height: 34px;
+	display: inline-block;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<description>JSTL 1.1 core library</description>
+	<display-name>JSTL core</display-name>
+	<tlib-version>1.1</tlib-version>
+	<short-name>icss</short-name>
+	<uri>http://www.chinasofti.com/etc/webtag</uri>
+
+
+
+	<tag>
+		<description>
+       TokenTag
+    </description>
+		<name>token</name>
+		<tag-class>com.chinasofti.web.common.taglib.TokenTag</tag-class>
+		<body-content>JSP</body-content>
+
+	</tag>
+</taglib>

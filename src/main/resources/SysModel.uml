@@ -1,0 +1,1788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="SysModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="_ECXGEHuWEeWWz4NjfC6ObA" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_ECZiUHuWEeWWz4NjfC6ObA" name="chinasofti">
+      <packagedElement xmi:type="uml:Package" xmi:id="_ECZiUXuWEeWWz4NjfC6ObA" name="util">
+        <packagedElement xmi:type="uml:Package" xmi:id="_ECZiUnuWEeWWz4NjfC6ObA" name="web">
+          <packagedElement xmi:type="uml:Package" xmi:id="_ECZiU3uWEeWWz4NjfC6ObA" name="serverpush">
+            <packagedElement xmi:type="uml:Class" xmi:id="_EEt2gHuWEeWWz4NjfC6ObA" name="ServerPushMQ">
+              <ownedComment xmi:id="_EG-gUHuWEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: ServerPushMQ
+ * &lt;/p>
+ * &lt;p>
+ * Description: 服务器消息推送机制的消息等待序列
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2014
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_EiCEoHuWEeWWz4NjfC6ObA" name="waitQueue" visibility="package" isStatic="true">
+                <ownedComment xmi:id="_EiDSwHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 用于存放消息等待序列的散列表，键中包含了需要获取数据的客户端sessionid以及期望获取的消息名称，
+ * 值对象为存放消息字符串的容器并作为阻塞客户端的锁对象存在
+ */
+</body>
+                </ownedComment>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_EHIRUHuWEeWWz4NjfC6ObA" name="BuildinMessage">
+              <ownedComment xmi:id="_EHKGgHuWEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: BuildinMessage
+ * &lt;/p>
+ * &lt;p>
+ * Description: 用于保存功能组件内置的消息内容的接口
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2014
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_EiQHEHuWEeWWz4NjfC6ObA" name="MESSAGE_WAITE_TIMEOUT" visibility="public" isStatic="true" isReadOnly="true">
+                <ownedComment xmi:id="_EiSjUHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 本字符串说明用户等待消息超时
+ */
+</body>
+                </ownedComment>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_EiQHEXuWEeWWz4NjfC6ObA" value="Org_EricYang_Platform_ErrorMsg:ServerPush_Wait_TimeOut"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_EIOdgHuWEeWWz4NjfC6ObA" name="PreviewImageUploadServlet">
+              <generalization xmi:id="_EiTxcXuWEeWWz4NjfC6ObA" general="_EiTxcHuWEeWWz4NjfC6ObA"/>
+              <ownedOperation xmi:id="_EibGMHuWEeWWz4NjfC6ObA" name="destroy" visibility="public">
+                <ownedComment xmi:id="_EidicHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * Destruction of the servlet. &lt;br>
+ */
+</body>
+                </ownedComment>
+              </ownedOperation>
+              <ownedOperation xmi:id="_EijpEHuWEeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_EipIoHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * The doGet method of the servlet. &lt;br>
+ * This method is called when a form has its tag value method equals to get.
+ * @param requestthe request send by the client to the server
+ * @param responsethe response send by the server to the client
+ * @throws ServletExceptionif an error occurred
+ * @throws IOExceptionif an error occurred
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EijpEXuWEeWWz4NjfC6ObA" name="request"/>
+                <ownedParameter xmi:id="_EijpEnuWEeWWz4NjfC6ObA" name="response"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_EipvsHuWEeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_Eirk4HuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * The doPost method of the servlet. &lt;br>
+ * This method is called when a form has its tag value method equals to
+ * post.
+ * @param requestthe request send by the client to the server
+ * @param responsethe response send by the server to the client
+ * @throws ServletExceptionif an error occurred
+ * @throws IOExceptionif an error occurred
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EiqWwHuWEeWWz4NjfC6ObA" name="request"/>
+                <ownedParameter xmi:id="_EiqWwXuWEeWWz4NjfC6ObA" name="response"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_EisL8HuWEeWWz4NjfC6ObA" name="init" visibility="public">
+                <ownedComment xmi:id="_EiuBIHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * Initialization of the servlet. &lt;br>
+ * @throws ServletExceptionif an error occurs
+ */
+</body>
+                </ownedComment>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_ELWC8HuWEeWWz4NjfC6ObA" name="MessageHandler">
+              <ownedComment xmi:id="_ELXREHuWEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: MessageHandler
+ * &lt;/p>
+ * &lt;p>
+ * Description: 消息处理器回调接口
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2014
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <ownedOperation xmi:id="_EjIQ0HuWEeWWz4NjfC6ObA" name="handle" visibility="public">
+                <ownedParameter xmi:id="_EjIQ0XuWEeWWz4NjfC6ObA" name="messageQueue"/>
+                <ownedParameter xmi:id="_EjIQ0nuWEeWWz4NjfC6ObA" name="key" type="_EP5LwHuWEeWWz4NjfC6ObA"/>
+                <ownedParameter xmi:id="_EjIQ03uWEeWWz4NjfC6ObA" name="msg" type="_EM3s8HuWEeWWz4NjfC6ObA"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_ELaUYHuWEeWWz4NjfC6ObA" name="PreviewImageInfo">
+              <ownedAttribute xmi:id="_EjJe8HuWEeWWz4NjfC6ObA" name="uploadFile" visibility="package"/>
+              <ownedOperation xmi:id="_EjKGAHuWEeWWz4NjfC6ObA" name="getUploadFile" visibility="public">
+                <ownedParameter xmi:id="_EjKGAXuWEeWWz4NjfC6ObA" name="return" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_EjL7MHuWEeWWz4NjfC6ObA" name="setUploadFile" visibility="public">
+                <ownedParameter xmi:id="_EjL7MXuWEeWWz4NjfC6ObA" name="uploadFile"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_EMocYHuWEeWWz4NjfC6ObA" name="ExchangeRatePublishServlet">
+              <ownedComment xmi:id="_EMtU4HuWEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: ExchangeRatePublishServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 发布实时汇率信息的服务器端Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2014
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_EjMiQHuWEeWWz4NjfC6ObA" general="_EiTxcHuWEeWWz4NjfC6ObA"/>
+              <ownedOperation xmi:id="_EjOXcHuWEeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_EjPlkHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 处理发布实时汇率信息的Get HTTP请求方法，，本Servlet要求不同的请求返回相同的结果，因此调用doPost方法统一处理
+ * @param requestHttp请求对象
+ * @param responseHttp响应对象
+ * @throws ServletException如果有servlet访问方面的异常，则抛出异常信息
+ * @throws IOException如果网络访问出错则抛出异常信息
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EjOXcXuWEeWWz4NjfC6ObA" name="request"/>
+                <ownedParameter xmi:id="_EjOXcnuWEeWWz4NjfC6ObA" name="response"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_EjQMoHuWEeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_EjRawHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 处理Post请求的方法
+ * @param requesthttp请求对象
+ * @param responsehttp响应对象
+ * @throws ServletException如果有servlet访问方面的异常，则抛出异常信息
+ * @throws IOException如果网络访问出错则抛出异常信息
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EjQMoXuWEeWWz4NjfC6ObA" name="request"/>
+                <ownedParameter xmi:id="_EjQMonuWEeWWz4NjfC6ObA" name="response"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_EM3s8HuWEeWWz4NjfC6ObA" name="Message">
+              <ownedComment xmi:id="_EM5iIHuWEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: Message
+ * &lt;/p>
+ * &lt;p>
+ * Description: 用于保存服务器推送消息内容的类
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2014
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_EjSo4HuWEeWWz4NjfC6ObA" name="msg" visibility="package">
+                <ownedComment xmi:id="_EjTP8HuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 服务器推送的消息内容字符串
+ */
+</body>
+                </ownedComment>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedOperation xmi:id="_EjT3AHuWEeWWz4NjfC6ObA" name="getMsg" visibility="public">
+                <ownedComment xmi:id="_EjaksHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 提供给消息的消费者获取当前消息内容的方法
+ * @return 返回消息生产者生产的消息内容
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EjT3AXuWEeWWz4NjfC6ObA" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_EjcZ4HuWEeWWz4NjfC6ObA" name="setMsg" visibility="public">
+                <ownedComment xmi:id="_EjePEHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 提供给消息的生产者设置当前消息内容的方法
+ * @param msg生产者生产后希望发送给消费者的消息内容
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EjcZ4XuWEeWWz4NjfC6ObA" name="msg">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_EjePEXuWEeWWz4NjfC6ObA" name="toString" visibility="public">
+                <ownedComment xmi:id="_EjfdMHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 将对象转变为字符串形式的方法，本类对象的字符串形式即消息内容
+ * @return 当前的消息内容
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_Eje2IHuWEeWWz4NjfC6ObA" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_EN610HuWEeWWz4NjfC6ObA" name="GetImgUploadStateServlet">
+              <ownedComment xmi:id="_EN95IHuWEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: GetImgUploadStateServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 上传需要预览图像时，用于向客户端推送上传完成信息的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2014
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_EjfdMXuWEeWWz4NjfC6ObA" general="_EJMt4HuWEeWWz4NjfC6ObA"/>
+              <ownedOperation xmi:id="_EjgEQHuWEeWWz4NjfC6ObA" name="getHandler" visibility="public">
+                <ownedParameter xmi:id="_EjgEQXuWEeWWz4NjfC6ObA" name="request"/>
+                <ownedParameter xmi:id="_EjgEQnuWEeWWz4NjfC6ObA" name="response"/>
+                <ownedParameter xmi:id="_EjgEQ3uWEeWWz4NjfC6ObA" name="return" type="_ELWC8HuWEeWWz4NjfC6ObA" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_EN_HQHuWEeWWz4NjfC6ObA" name="PushClientList">
+              <ownedOperation xmi:id="_EjiggHuWEeWWz4NjfC6ObA" name="main" visibility="public" isStatic="true">
+                <ownedComment xmi:id="_EjjHkHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * @param args
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EjiggXuWEeWWz4NjfC6ObA" name="args">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EjiggnuWEeWWz4NjfC6ObA" value="*"/>
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ejigg3uWEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_EOdBUHuWEeWWz4NjfC6ObA" name="MessageProducer">
+              <ownedComment xmi:id="_EOfdkHuWEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: MessageProducer
+ * &lt;/p>
+ * &lt;p>
+ * Description: 服务器推送消息的消息生产者
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2014
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <ownedOperation xmi:id="_EjjuoHuWEeWWz4NjfC6ObA" name="sendMessage" visibility="public">
+                <ownedComment xmi:id="_EjkVsHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 生产消息的方法
+ * @param sessionID本次生产的消息针对的客户sessionid
+ * @param msg生产的消息内容
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EjjuoXuWEeWWz4NjfC6ObA" name="sessionID">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_EjjuonuWEeWWz4NjfC6ObA" name="messageTitle">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_Ejjuo3uWEeWWz4NjfC6ObA" name="msg">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_EOxKYHuWEeWWz4NjfC6ObA" name="MessageConsumer">
+              <ownedComment xmi:id="_EO0NsHuWEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: MessageConsumer
+ * &lt;/p>
+ * &lt;p>
+ * Description: 消息的消费者
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2014
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <ownedOperation xmi:id="_Ejk8wHuWEeWWz4NjfC6ObA" name="searchMessage" visibility="public">
+                <ownedComment xmi:id="_EjmK4HuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 消费者尝试获取并处理消息的方法，本方法会导致线程阻塞，直到真的获取到需要的消息并执行消息处理器的处理代码后才会继续执行后续程序
+ * @param sessionID需要获取消息的会话sessionid
+ * @param messageTitle需要获取的消息的标题
+ * @param handler当实际获取到消息后的处理器对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_Ejk8wXuWEeWWz4NjfC6ObA" name="sessionID">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_Ejk8wnuWEeWWz4NjfC6ObA" name="messageTitle">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_Ejlj0HuWEeWWz4NjfC6ObA" name="handler" type="_ELWC8HuWEeWWz4NjfC6ObA"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_EPF6gHuWEeWWz4NjfC6ObA" name="GetExchangeRateServlet">
+              <ownedComment xmi:id="_EPJk4HuWEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: ExchangeRatePublishServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description:
+ * 功能组件中用于接收消息的核心Servlet，当用户需要获取推送消息时，直接请求该Servlet,并给Servlet传递表示需要接收消息标题的参数
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2014
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_Ejmx8HuWEeWWz4NjfC6ObA" general="_EiTxcHuWEeWWz4NjfC6ObA"/>
+              <ownedAttribute xmi:id="_EjonIHuWEeWWz4NjfC6ObA" name="clients" visibility="package" isStatic="true">
+                <ownedComment xmi:id="_EjqcUHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 用于存放当前系统中的所有客户端，向量中的每一个元素都是单一客户端的sessionid
+ */
+</body>
+                </ownedComment>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_Ejs4kHuWEeWWz4NjfC6ObA" name="messageTitleParameterName" visibility="package">
+                <ownedComment xmi:id="_EjutwHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 希望获取推送消息时，提供给Servlet的消息名称的参数名
+ */
+</body>
+                </ownedComment>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_Ejs4kXuWEeWWz4NjfC6ObA" value="messageTitle"/>
+              </ownedAttribute>
+              <ownedOperation xmi:id="_EjvU0HuWEeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_Ejy_MHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 处理获取实时汇率信息的Get HTTP请求方法，，本Servlet要求不同的请求返回相同的结果，因此调用doPost方法统一处理
+ * @param requestHttp请求对象
+ * @param responseHttp响应对象
+ * @throws ServletException如果有servlet访问方面的异常，则抛出异常信息
+ * @throws IOException如果网络访问出错则抛出异常信息
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EjvU0XuWEeWWz4NjfC6ObA" name="request"/>
+                <ownedParameter xmi:id="_EjvU0nuWEeWWz4NjfC6ObA" name="response"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_EjzmQHuWEeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_Ej2CgHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 处理Post请求的方法
+ * @param requesthttp请求对象
+ * @param responsehttp响应对象
+ * @throws ServletException如果有servlet访问方面的异常，则抛出异常信息
+ * @throws IOException如果网络访问出错则抛出异常信息
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EjzmQXuWEeWWz4NjfC6ObA" name="request"/>
+                <ownedParameter xmi:id="_EjzmQnuWEeWWz4NjfC6ObA" name="response"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_Ej2CgXuWEeWWz4NjfC6ObA" name="init" visibility="public">
+                <ownedComment xmi:id="_Ej33sHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 初始化Servlet的方法，主要作用是获取自定义的消息名称参数名
+ */
+</body>
+                </ownedComment>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_EP5LwHuWEeWWz4NjfC6ObA" name="ServerPushKey">
+              <ownedComment xmi:id="_EP7oAHuWEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: ServerPushKey
+ * &lt;/p>
+ * &lt;p>
+ * Description: 消息等待序列键，包含了尝试获取消息的客户sessionid和试图获取的消息名称
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2014
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <ownedAttribute xmi:id="_EkMAwHuWEeWWz4NjfC6ObA" name="sessionID" visibility="package">
+                <ownedComment xmi:id="_EkQSMHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 试图获取本消息的客户sessionid
+ */
+</body>
+                </ownedComment>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_EkOdAHuWEeWWz4NjfC6ObA" value=""/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_EkSucHuWEeWWz4NjfC6ObA" name="messageTitle" visibility="package">
+                <ownedComment xmi:id="_EkT8kHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 试图获取的消息名称
+ */
+</body>
+                </ownedComment>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_EkSucXuWEeWWz4NjfC6ObA" value=""/>
+              </ownedAttribute>
+              <ownedOperation xmi:id="_EkUjonuWEeWWz4NjfC6ObA" name="equals" visibility="public">
+                <ownedComment xmi:id="_EkZcIHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 判定两个消息键是否相同的方法，如果两个消息键包含的sessionid和消息标题都相同则认为连个键相同
+ * @param arg0用于对比的另一个消息对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EkVKsHuWEeWWz4NjfC6ObA" name="arg0"/>
+                <ownedParameter xmi:id="_EkVKsXuWEeWWz4NjfC6ObA" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_EkaqQXuWEeWWz4NjfC6ObA" name="hashCode" visibility="public">
+                <ownedComment xmi:id="_Ekb4YHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 获取消息键对象的哈希值
+ * @return 对象哈希值
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EkaqQnuWEeWWz4NjfC6ObA" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_EiTxcHuWEeWWz4NjfC6ObA" name="HttpServlet"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_EJMt4HuWEeWWz4NjfC6ObA" name="BaseGetPushMsgServlet" isAbstract="true">
+              <ownedComment xmi:id="_EJXtAHuWEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: BaseGetPushMsgServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 实现获取推送信息的基础Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2014
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_EiuBIXuWEeWWz4NjfC6ObA" general="_EiTxcHuWEeWWz4NjfC6ObA"/>
+              <ownedAttribute xmi:id="_EixEcHuWEeWWz4NjfC6ObA" name="messageTitleParameterName" visibility="package">
+                <ownedComment xmi:id="_EizgsHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 希望获取推送消息时，提供给Servlet的消息名称的参数名
+ */
+</body>
+                </ownedComment>
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_EixEcXuWEeWWz4NjfC6ObA" value="messageTitle"/>
+              </ownedAttribute>
+              <ownedOperation xmi:id="_Ei0u0HuWEeWWz4NjfC6ObA" name="getHandler" visibility="public" isAbstract="true">
+                <ownedComment xmi:id="_Ei3LEHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 用于设置消息处理对象的抽象回调，子类利用该回调确定获取推送消息后的处理方式
+ * @param requestServlet获取到的Http请求对象
+ * @param responseServlet获取到的Http相应对象
+ * @return 创建好的消息处理对象，供Servlet使用
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_Ei0u0XuWEeWWz4NjfC6ObA" name="request"/>
+                <ownedParameter xmi:id="_Ei0u0nuWEeWWz4NjfC6ObA" name="response"/>
+                <ownedParameter xmi:id="_Ei0u03uWEeWWz4NjfC6ObA" name="return" type="_ELWC8HuWEeWWz4NjfC6ObA" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_Ei4ZMHuWEeWWz4NjfC6ObA" name="initService" visibility="public">
+                <ownedParameter xmi:id="_Ei5nUHuWEeWWz4NjfC6ObA" name="request"/>
+                <ownedParameter xmi:id="_Ei5nUXuWEeWWz4NjfC6ObA" name="response"/>
+                <ownedParameter xmi:id="_Ei5nUnuWEeWWz4NjfC6ObA" name="session"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_Ei8DkHuWEeWWz4NjfC6ObA" name="destroy" visibility="public">
+                <ownedComment xmi:id="_Ei-f0HuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * Destruction of the servlet. &lt;br>
+ */
+</body>
+                </ownedComment>
+              </ownedOperation>
+              <ownedOperation xmi:id="_Ei_G4HuWEeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_EjCKMHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * The doGet method of the servlet. &lt;br>
+ * This method is called when a form has its tag value method equals to get.
+ * @param requestthe request send by the client to the server
+ * @param responsethe response send by the server to the client
+ * @throws ServletExceptionif an error occurred
+ * @throws IOExceptionif an error occurred
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_Ei_G4XuWEeWWz4NjfC6ObA" name="request"/>
+                <ownedParameter xmi:id="_Ei_G4nuWEeWWz4NjfC6ObA" name="response"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_EjDYUHuWEeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_EjFNgHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * The doPost method of the servlet. &lt;br>
+ * This method is called when a form has its tag value method equals to
+ * post.
+ * @param requestthe request send by the client to the server
+ * @param responsethe response send by the server to the client
+ * @throws ServletExceptionif an error occurred
+ * @throws IOExceptionif an error occurred
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_EjDYUXuWEeWWz4NjfC6ObA" name="request"/>
+                <ownedParameter xmi:id="_EjDYUnuWEeWWz4NjfC6ObA" name="response"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_EjF0kHuWEeWWz4NjfC6ObA" name="init" visibility="public">
+                <ownedComment xmi:id="_EjHpwHuWEeWWz4NjfC6ObA">
+                  <body>/** 
+ * Initialization of the servlet. &lt;br>
+ * @throws ServletExceptionif an error occurs
+ */
+</body>
+                </ownedComment>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_EUxrwHuWEeWWz4NjfC6ObA" name="upload"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_n9DJxnusEeWWz4NjfC6ObA" name="jdbc">
+          <packagedElement xmi:type="uml:Package" xmi:id="_n9DJx3usEeWWz4NjfC6ObA" name="template"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_n9Dw0XusEeWWz4NjfC6ObA" name="sec"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_n74FEXusEeWWz4NjfC6ObA" name="ordersys">
+        <packagedElement xmi:type="uml:Package" xmi:id="_n74FEnusEeWWz4NjfC6ObA" name="service">
+          <packagedElement xmi:type="uml:Package" xmi:id="_n74FE3usEeWWz4NjfC6ObA" name="admin">
+            <packagedElement xmi:type="uml:Class" xmi:id="_n74FFHusEeWWz4NjfC6ObA" name="UserService">
+              <ownedComment xmi:id="_n76hUHusEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: UserService
+ * &lt;/p>
+ * &lt;p>
+ * Description: 用户管理服务对象
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <ownedOperation xmi:id="_oAL9UXusEeWWz4NjfC6ObA" name="getByPage" visibility="public">
+                <ownedComment xmi:id="_oAOZkHusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 分页获取用户数据的方法
+ * @param page要获取数据的页号
+ * @param pageSize每页显示的条目数
+ * @return 当前页的用户数据列表
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_oAL9UnusEeWWz4NjfC6ObA" name="page">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_oAL9U3usEeWWz4NjfC6ObA" name="pageSize">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_oAL9VHusEeWWz4NjfC6ObA" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_n9DJwnusEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_oAOZkXusEeWWz4NjfC6ObA" name="getMaxPage" visibility="public">
+                <ownedComment xmi:id="_oAQ10HusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 获取用户信息的最大页数
+ * @param pageSize每页显示的条目数
+ * @return 当前数据库中数据的最大页数
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_oAOZknusEeWWz4NjfC6ObA" name="pageSize">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_oAOZk3usEeWWz4NjfC6ObA" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_oARc4HusEeWWz4NjfC6ObA" name="addUser" visibility="public">
+                <ownedComment xmi:id="_oAWVYHusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 添加用户的方法
+ * @param info需要添加的用户信息
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_oARc4XusEeWWz4NjfC6ObA" name="info"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_oAYKkHusEeWWz4NjfC6ObA" name="deleteUser" visibility="public">
+                <ownedComment xmi:id="_oAb08HusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 删除用户的方法
+ * @param userId待删除用户的Id
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_oAYKkXusEeWWz4NjfC6ObA" name="userId">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_oAccAHusEeWWz4NjfC6ObA" name="modify" visibility="public">
+                <ownedComment xmi:id="_oAeRMHusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 修改用户自身信息的方法
+ * @param info需要修改的用户信息，其中userId属性指明需要修改的用户ID，其他信息为目标值，本人修改信息只能修改密码和头像
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_oAccAXusEeWWz4NjfC6ObA" name="info"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_oAe4QHusEeWWz4NjfC6ObA" name="adminModify" visibility="public">
+                <ownedComment xmi:id="_oAgtcHusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 管理员修改用户信息的方法
+ * @param info需要修改的用户信息，其中userId属性指明需要修改的用户ID，其他信息为目标值
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_oAe4QXusEeWWz4NjfC6ObA" name="info"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_oAhUgHusEeWWz4NjfC6ObA" name="getUserById" visibility="public">
+                <ownedComment xmi:id="_oAjJsHusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 根据ID获取用户详细信息的方法
+ * @param userId需要获取详细信息的用户ID
+ * @return 返回查询到的用户详细信息
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_oAhUgXusEeWWz4NjfC6ObA" name="userId">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_oAhUgnusEeWWz4NjfC6ObA" name="return" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_zgScEHuvEeWWz4NjfC6ObA" name="DishesService">
+              <ownedComment xmi:id="_zgepUHuvEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: DishesService
+ * &lt;/p>
+ * &lt;p>
+ * Description: 菜品管理服务对象
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <ownedOperation xmi:id="_zm8dsHuvEeWWz4NjfC6ObA" name="getDishesInfoByPage" visibility="public">
+                <ownedComment xmi:id="_zm-S4HuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 分页获取菜品数据的方法
+ * @param page要获取数据的页号
+ * @param pageSize每页显示的条目数
+ * @return 当前页的菜品数据列表
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_zm8dsXuvEeWWz4NjfC6ObA" name="page">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_zm8dsnuvEeWWz4NjfC6ObA" name="pageSize">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_zm8ds3uvEeWWz4NjfC6ObA" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_zkzvsnuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_zm-58HuvEeWWz4NjfC6ObA" name="getMaxPage" visibility="public">
+                <ownedComment xmi:id="_znCkUHuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 获取菜品信息的最大页数
+ * @param pageSize每页显示的条目数
+ * @return 当前数据库中数据的最大页数
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_zm-58XuvEeWWz4NjfC6ObA" name="pageSize">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_zm-58nuvEeWWz4NjfC6ObA" name="return" direction="return">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_znEZgHuvEeWWz4NjfC6ObA" name="deleteDishesById" visibility="public">
+                <ownedComment xmi:id="_znGOsHuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 根据菜品ID值删除菜品信息的方法
+ * @param dishesId要删除的菜品Id
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_znEZgXuvEeWWz4NjfC6ObA" name="dishesId">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_znGOsXuvEeWWz4NjfC6ObA" name="addDishes" visibility="public">
+                <ownedComment xmi:id="_znIq8HuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 添加菜品的方法
+ * @param info需要添加的菜品信息
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_znGOsnuvEeWWz4NjfC6ObA" name="info">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_zkzvtHuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_znIq8XuvEeWWz4NjfC6ObA" name="getDishesById" visibility="public">
+                <ownedComment xmi:id="_znKgIHuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 根据dishesId获取菜品详细信息的方法
+ * @param dishesId要获取信息的特定菜品Id
+ * @return 返回该id的菜品详细信息
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_znIq8nuvEeWWz4NjfC6ObA" name="dishesId">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_znIq83uvEeWWz4NjfC6ObA" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_zkzvtHuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_znLHMHuvEeWWz4NjfC6ObA" name="modifyDishes" visibility="public">
+                <ownedComment xmi:id="_znNjcHuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 修改菜品信息的方法
+ * @param Info要修改的菜品信息，其中dishesId为修改依据，其余信息为修改的目标值
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_znLHMXuvEeWWz4NjfC6ObA" name="info">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_zkzvtHuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_znOKgHuvEeWWz4NjfC6ObA" name="getTop4RecommendDishes" visibility="public">
+                <ownedComment xmi:id="_znQmwHuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 获取头4条推荐菜品的信息
+ * @return 头4条推荐菜品列表
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_znOKgXuvEeWWz4NjfC6ObA" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_zkzvsnuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_XbwoE3u0EeWWz4NjfC6ObA" name="waiters"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_n9DJw3usEeWWz4NjfC6ObA" name="vo"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_wHI2U3usEeWWz4NjfC6ObA" name="servlets">
+          <packagedElement xmi:type="uml:Package" xmi:id="_wHI2VHusEeWWz4NjfC6ObA" name="admin">
+            <packagedElement xmi:type="uml:Class" xmi:id="_wHJdYHusEeWWz4NjfC6ObA" name="GetUserByPageServlet">
+              <ownedComment xmi:id="_wHMgsHusEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: GetUserByPageServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 以分页的方式获取用户信息的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_wKqEYXusEeWWz4NjfC6ObA" general="_wKqEYHusEeWWz4NjfC6ObA"/>
+              <ownedOperation xmi:id="_wKqrcHusEeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_wKsgoHusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_wKqrcXusEeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_wIRewXusEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_wKqrcnusEeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_wIRewnusEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_wKtHsHusEeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_wKvj8HusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调,为了考虑以后的平台兼容性， 本响应返回xml结果
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_wKtHsXusEeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_wIRewXusEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_wKtHsnusEeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_wIRewnusEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_wKqEYHusEeWWz4NjfC6ObA" name="HttpServlet"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_x6BJMXusEeWWz4NjfC6ObA" name="DeleteDishesServlet">
+              <ownedComment xmi:id="_x6CXUHusEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: DeleteDishesServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 删除菜品的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_x7VX0XusEeWWz4NjfC6ObA">
+                <general xmi:type="uml:Class" href="../SysModel.uml#_x7VX0HusEeWWz4NjfC6ObA"/>
+              </generalization>
+              <ownedOperation xmi:id="_x7VX0nusEeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_x7Wl8HusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_x7VX03usEeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_x7ODEnusEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_x7VX1HusEeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_x7ODE3usEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_x7XNAHusEeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_x7YbIHusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_x7XNAXusEeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_x7ODEnusEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_x7XNAnusEeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_x7ODE3usEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_2QNtYHusEeWWz4NjfC6ObA" name="DeleteUserServlet">
+              <ownedComment xmi:id="_2QPikHusEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: DeleteUserServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 删除用户的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_2RgG0XusEeWWz4NjfC6ObA">
+                <general xmi:type="uml:Class" href="../SysModel.uml#_2RgG0HusEeWWz4NjfC6ObA"/>
+              </generalization>
+              <ownedOperation xmi:id="_2Rgt4HusEeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_2Rh8AHusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_2Rgt4XusEeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_2RanQHusEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_2Rgt4nusEeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_2RanQXusEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_2RijEHusEeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_2RjxMHusEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_2RijEXusEeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_2RanQHusEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_2RijEnusEeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_2RanQXusEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_0mnK8HuvEeWWz4NjfC6ObA" name="AddDishesServlet">
+              <ownedComment xmi:id="_0moZEHuvEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: AddDishesServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 添加菜品的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_0oeMIXuvEeWWz4NjfC6ObA">
+                <general xmi:type="uml:Class" href="../SysModel.uml#_0oeMIHuvEeWWz4NjfC6ObA"/>
+              </generalization>
+              <ownedOperation xmi:id="_0oezMHuvEeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_0ofaQHuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_0oezMXuvEeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_0oA5JHuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_0oezMnuvEeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_0oA5JXuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_0ogBUHuvEeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_0ohPcHuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_0ogBUXuvEeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_0oA5JHuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_0ogBUnuvEeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_0oA5JXuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_3EzEoHuvEeWWz4NjfC6ObA" name="GetDishesInfoByPageServlet">
+              <ownedComment xmi:id="_3E39IHuvEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: GetDishesInfoByPageServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 以分页形式获取菜品信息的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_3GOoAXuvEeWWz4NjfC6ObA">
+                <general xmi:type="uml:Class" href="../SysModel.uml#_3GOoAHuvEeWWz4NjfC6ObA"/>
+              </generalization>
+              <ownedOperation xmi:id="_3GPPEHuvEeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_3GREQHuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_3GPPEXuvEeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_3GFeGnuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_3GPPEnuvEeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_3GFeG3uvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_3GRrUHuvEeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_3GUHkHuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调,为了考虑以后的平台兼容性， 本响应返回xml结果
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_3GRrUXuvEeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_3GFeGnuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_3GRrUnuvEeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_3GFeG3uvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_5s5IQHuvEeWWz4NjfC6ObA" name="ModifyDishesServlet">
+              <ownedComment xmi:id="_5s6WYHuvEeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: ModifyDishesServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 修改菜品信息的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_5uTdgXuvEeWWz4NjfC6ObA">
+                <general xmi:type="uml:Class" href="../SysModel.uml#_5uTdgHuvEeWWz4NjfC6ObA"/>
+              </generalization>
+              <ownedOperation xmi:id="_5uUEkHuvEeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_5uVSsHuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_5uUEkXuvEeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_5uMv0HuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_5uUEknuvEeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_5uMv0XuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_5uVSsXuvEeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_5uWg0HuvEeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_5uVSsnuvEeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_5uMv0HuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_5uVSs3uvEeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_5uMv0XuvEeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_RTtu8Hu4EeWWz4NjfC6ObA" name="ChangeOrderStateServlet">
+              <ownedComment xmi:id="_RUZrcHu4EeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: ChangeOrderStateServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 修改订单状态信息的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_RV0nwXu4EeWWz4NjfC6ObA">
+                <general xmi:type="uml:Class" href="../SysModel.uml#_RV0nwHu4EeWWz4NjfC6ObA"/>
+              </generalization>
+              <ownedOperation xmi:id="_RV1O0Hu4EeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_RV3EAHu4EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_RV1O0Xu4EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_RVrd1Hu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_RV1O0nu4EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_RVrd1Xu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_RV3rEHu4EeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_RV45MHu4EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_RV3rEXu4EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_RVrd1Hu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_RV3rEnu4EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_RVrd1Xu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_SpRzsHu4EeWWz4NjfC6ObA" name="GetOrderDetailServlet">
+              <ownedComment xmi:id="_SqbDMHu4EeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: GetOrderDetailServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 获取订单菜品详情的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_Sr8tMXu4EeWWz4NjfC6ObA">
+                <general xmi:type="uml:Class" href="../SysModel.uml#_Sr8tMHu4EeWWz4NjfC6ObA"/>
+              </generalization>
+              <ownedOperation xmi:id="_Sr8tMnu4EeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_Sr_JcHu4EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_Sr8tM3u4EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_SrYsgHu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_Sr8tNHu4EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_SrYsgXu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_Sr_wgHu4EeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_SsCMwHu4EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调,为了考虑以后的平台兼容性， 本响应返回xml结果
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_Sr_wgXu4EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_SrYsgHu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_Sr_wgnu4EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_SrYsgXu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_UNkQ8Hu4EeWWz4NjfC6ObA" name="GetRTPayOrderServlet">
+              <ownedComment xmi:id="_UN5BEHu4EeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: GetRTPayOrderServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 获取实时结账订单信息的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_UPQTAXu4EeWWz4NjfC6ObA" general="_UPQTAHu4EeWWz4NjfC6ObA"/>
+              <ownedAttribute xmi:id="_UQcl0Hu4EeWWz4NjfC6ObA" name="pays" visibility="public" isStatic="true">
+                <ownedComment xmi:id="_UQdz8Hu4EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 获取实时结账订单信息的等待列表
+ */
+</body>
+                </ownedComment>
+              </ownedAttribute>
+              <ownedOperation xmi:id="_UQebAHu4EeWWz4NjfC6ObA" name="getHandler" visibility="public">
+                <ownedComment xmi:id="_UQgQMHu4EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 获取实时消息处理器的回调
+ * @param request请求对象
+ * @param response响应对象
+ * @return 本Servlet使用的实时消息处理器
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_UQebAXu4EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_UOuHiXu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_UQebAnu4EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_UOuukHu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_UQebA3u4EeWWz4NjfC6ObA" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_UOuul3u4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_UQg3QHu4EeWWz4NjfC6ObA" name="initService" visibility="public">
+                <ownedComment xmi:id="_UQiFYHu4EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 初始化实时消息获取服务的方法
+ * @param request请求信息
+ * @param response响应对象
+ * @param session会话跟踪对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_UQg3QXu4EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_UOuHiXu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_UQg3Qnu4EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_UOuukHu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_UQg3Q3u4EeWWz4NjfC6ObA" name="session">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_UOuukXu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_UPQTAHu4EeWWz4NjfC6ObA" name="BaseGetPushMsgServlet"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_WfaUkHu0EeWWz4NjfC6ObA" name="waiters">
+            <packagedElement xmi:type="uml:Class" xmi:id="_Wfa7oHu0EeWWz4NjfC6ObA" name="AddCartServlet">
+              <ownedComment xmi:id="_Wfcw0Hu0EeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title:AddCartServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 加入购物车的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_Wi8JsXu0EeWWz4NjfC6ObA" general="_Wi8JsHu0EeWWz4NjfC6ObA"/>
+              <ownedOperation xmi:id="_Wi8wwHu0EeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_Wi9-4Hu0EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_Wi8wwXu0EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_Wg3GGHu0EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_Wi8wwnu0EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_Wg3GGXu0EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_Wi9-4Xu0EeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_Wi_NAHu0EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_Wi9-4nu0EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_Wg3GGHu0EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_Wi9-43u0EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_Wg3GGXu0EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_Wi8JsHu0EeWWz4NjfC6ObA" name="HttpServlet"/>
+            <packagedElement xmi:type="uml:Class" xmi:id="_Xa0z8Hu0EeWWz4NjfC6ObA" name="CommitCartServlet">
+              <ownedComment xmi:id="_Xa3QMHu0EeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title:CommitCartServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 提交点餐购物车并将菜品信息推送给后厨人员的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_XdqskXu0EeWWz4NjfC6ObA">
+                <general xmi:type="uml:Class" href="../SysModel.uml#_XdqskHu0EeWWz4NjfC6ObA"/>
+              </generalization>
+              <ownedOperation xmi:id="_XdrToHu0EeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_XdtI0Hu0EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_XdrToXu0EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_XbvZ-Xu0EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_XdrTonu0EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_XbvZ-nu0EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_Xdtv4Hu0EeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_XdwMIHu0EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_Xdtv4Xu0EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_XbvZ-Xu0EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_Xdtv4nu0EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_XbvZ-nu0EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_Zz_DsXu0EeWWz4NjfC6ObA" name="SetTableIdServlet">
+              <ownedComment xmi:id="_Z0AR0Hu0EeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title:SetTableIdServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 设置桌号的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_Z1FP4Xu0EeWWz4NjfC6ObA">
+                <general xmi:type="uml:Class" href="../SysModel.uml#_Z1FP4Hu0EeWWz4NjfC6ObA"/>
+              </generalization>
+              <ownedOperation xmi:id="_Z1F28Hu0EeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_Z1GeAHu0EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_Z1F28Xu0EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_Z1A-dHu0EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_Z1F28nu0EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_Z1A-dXu0EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_Z1HFEHu0EeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_Z1HsIHu0EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_Z1HFEXu0EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_Z1A-dHu0EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_Z1HFEnu0EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_Z1A-dXu0EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_XjV58Hu4EeWWz4NjfC6ObA" name="GetPayListServlet">
+              <ownedComment xmi:id="_XjXvIHu4EeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: GetPayListServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 获取需要买单订单列表的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_XklQEXu4EeWWz4NjfC6ObA">
+                <general xmi:type="uml:Class" href="../SysModel.uml#_XklQEHu4EeWWz4NjfC6ObA"/>
+              </generalization>
+              <ownedOperation xmi:id="_Xkl3IHu4EeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_XknsUHu4EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_Xkl3IXu4EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_XkbfF3u4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_Xkl3Inu4EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_XkbfGHu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_XkoTYHu4EeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_XkqIkHu4EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调,为了考虑以后的平台兼容性， 本响应返回xml结果
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_XkoTYXu4EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_XkbfF3u4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_XkoTYnu4EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_XkbfGHu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_ZWVhkXu4EeWWz4NjfC6ObA" name="RequestToPayServlet">
+              <ownedComment xmi:id="_ZWYk4Hu4EeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title: RequestToPayServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 向餐厅管理元推送买单信息的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_ZX8EEHu4EeWWz4NjfC6ObA">
+                <general xmi:type="uml:Class" href="../SysModel.uml#_ZX7dAHu4EeWWz4NjfC6ObA"/>
+              </generalization>
+              <ownedOperation xmi:id="_ZX8EEXu4EeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_ZX-gUHu4EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_ZX8EEnu4EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_ZXxsA3u4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_ZX8EE3u4EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_ZXxsBHu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_ZX_HYHu4EeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_ZYA8kHu4EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调，为了考虑以后的平台兼容性， 本Servlet推送xml结果
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_ZX_HYXu4EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_ZXxsA3u4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_ZX_HYnu4EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_ZXxsBHu4EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_XbwoFXu0EeWWz4NjfC6ObA" name="kitchen">
+            <packagedElement xmi:type="uml:Class" xmi:id="_OGlWgXu2EeWWz4NjfC6ObA" name="DishesDoneServlet">
+              <ownedComment xmi:id="_OGoZ0Hu2EeWWz4NjfC6ObA">
+                <body>/** 
+ * &lt;p>
+ * Title:DishesDoneServlet
+ * &lt;/p>
+ * &lt;p>
+ * Description: 菜品完成推送传菜消息的Servlet
+ * &lt;/p>
+ * &lt;p>
+ * Copyright: Copyright (c) 2015
+ * &lt;/p>
+ * &lt;p>
+ * Company: ChinaSoft International Ltd.
+ * &lt;/p>
+ * @author etc
+ * @version 1.0
+ */
+</body>
+              </ownedComment>
+              <generalization xmi:id="_OIpzEXu2EeWWz4NjfC6ObA" general="_OIpzEHu2EeWWz4NjfC6ObA"/>
+              <ownedOperation xmi:id="_OIqaIHu2EeWWz4NjfC6ObA" name="doGet" visibility="public">
+                <ownedComment xmi:id="_OIroQHu2EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以GET方式请求Servlet时由service方法回调,本Servlet不同方法不要求不同的响应，因此在本Servlet中直接调用doPost
+ * ，以保证响应的一致性
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_OIqaIXu2EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_OIjFaHu2EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_OIqaInu2EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_OIjscHu2EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_OIsPUHu2EeWWz4NjfC6ObA" name="doPost" visibility="public">
+                <ownedComment xmi:id="_OItdcHu2EeWWz4NjfC6ObA">
+                  <body>/** 
+ * 当以Post方式请求Servlet时由service方法回调
+ * @param request请求对象
+ * @param response响应对象
+ */
+</body>
+                </ownedComment>
+                <ownedParameter xmi:id="_OIsPUXu2EeWWz4NjfC6ObA" name="request">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_OIjFaHu2EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_OIsPUnu2EeWWz4NjfC6ObA" name="response">
+                  <type xmi:type="uml:DataType" href="../SysModel.uml#_OIjscHu2EeWWz4NjfC6ObA"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_OIpzEHu2EeWWz4NjfC6ObA" name="HttpServlet"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_0oBgMHuvEeWWz4NjfC6ObA" name="web">
+        <packagedElement xmi:type="uml:Package" xmi:id="_0oBgMXuvEeWWz4NjfC6ObA" name="common">
+          <packagedElement xmi:type="uml:Package" xmi:id="_0oBgMnuvEeWWz4NjfC6ObA" name="taglib"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_EUmsoHuWEeWWz4NjfC6ObA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_EUmsoXuWEeWWz4NjfC6ObA" name="util"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_EUwdoHuWEeWWz4NjfC6ObA" name="io"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_SrYFc3u4EeWWz4NjfC6ObA" name="text"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_EUwdo3uWEeWWz4NjfC6ObA" name="javax">
+    <packagedElement xmi:type="uml:Package" xmi:id="_EUwdpHuWEeWWz4NjfC6ObA" name="servlet">
+      <packagedElement xmi:type="uml:Package" xmi:id="_EUxEsXuWEeWWz4NjfC6ObA" name="http"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_wIRew3usEeWWz4NjfC6ObA" name="xml">
+      <packagedElement xmi:type="uml:Package" xmi:id="_wIRexHusEeWWz4NjfC6ObA" name="parsers"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_wIRexnusEeWWz4NjfC6ObA" name="transform">
+        <packagedElement xmi:type="uml:Package" xmi:id="_wIReyHusEeWWz4NjfC6ObA" name="dom"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_wIReynusEeWWz4NjfC6ObA" name="stream"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_wISF0XusEeWWz4NjfC6ObA" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_wISF0nusEeWWz4NjfC6ObA" name="w3c">
+      <packagedElement xmi:type="uml:Package" xmi:id="_wISF03usEeWWz4NjfC6ObA" name="dom"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

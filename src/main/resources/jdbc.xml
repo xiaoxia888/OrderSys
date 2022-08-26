@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdbc>
+	<drivername>com.mysql.jdbc.Driver</drivername>
+	<connectionstring>jdbc:mysql://localhost:3306/ordersys</connectionstring>
+	<dbmsusername>root</dbmsusername>
+	<dbmspassword>123456</dbmspassword>
+</jdbc>

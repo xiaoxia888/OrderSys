@@ -1,0 +1,85 @@
+body {
+  background-color: #e67e22;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+body, input, button {
+  font-family: Georgia, Helvetica;
+  font-size: 17px;
+  color: #2c3e50;
+}
+
+h1 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+h3 {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+a,
+a:hover {
+  color: #9b59b6;
+}
+
+pre code {
+  color: #fff;
+  font-size: 18px;
+}
+
+.parent {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 50px 0;
+  padding: 20px;
+}
+
+.input {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+#toggle {
+  color: #ecf0f1;
+  background-color: #8e44ad;
+  padding: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#toggle:hover {
+  background-color: #9b59b6;
+}
+
+
+#inl {
+  margin: 1em 0;
+}
+
+#inlvc {
+  vertical-align: top;
+  font-weight: bold;
+  color: #c0392b;
+  margin: 80px;
+}
+
+.block {
+  display: block;
+}
+.inline {
+  display: inline-block;
+}
+
+.gh-fork {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0;
+}
