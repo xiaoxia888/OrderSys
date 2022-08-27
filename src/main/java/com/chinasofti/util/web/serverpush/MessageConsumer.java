@@ -2,36 +2,7 @@
 /*    */ 
 /*    */ 
 /*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
-/*    */ 
+
 /*    */ public class MessageConsumer
 /*    */ {
 /*    */   public void searchMessage(String sessionID, String messageTitle, MessageHandler handler) {
@@ -57,7 +28,8 @@
 /*    */       
 /*    */       try {
 /* 59 */         ServerPushMQ.waitQueue.put(key, msg);
-/*    */         
+/*    */
+            //System.out.println("MessageConsumer"+msg);
 /* 61 */         msg.wait();
 /*    */         
 /* 63 */         handler.handle(ServerPushMQ.waitQueue, key, msg);

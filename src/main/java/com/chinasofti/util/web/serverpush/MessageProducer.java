@@ -37,7 +37,8 @@
 /* 37 */     if (ServerPushMQ.waitQueue.get(key) != null) {
 /*    */       
 /* 39 */       Message message = ServerPushMQ.waitQueue.get(key);
-/*    */       
+/*    */
+        System.out.println("MessageProducer"+msg);
 /* 41 */       message.setMsg(msg);
 /*    */       
 /* 43 */       synchronized (message) {

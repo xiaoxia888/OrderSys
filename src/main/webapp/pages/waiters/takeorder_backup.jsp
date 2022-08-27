@@ -185,7 +185,7 @@
 		var dishesPrice = document.getElementById("dishesPrice");
 		var recommend = document.getElementById("recommend");
 		var dishesImg = document.getElementById("dishesImg");
-		dishesImg.src = "img/dishes/" + img;
+		dishesImg.src = "img.order?path=D:/store/img/dishes/" + img;
 		dishesName.innerHTML = name;
 		dishesDiscript.innerHTML = disc;
 		dishesTxt.innerHTML = txt;

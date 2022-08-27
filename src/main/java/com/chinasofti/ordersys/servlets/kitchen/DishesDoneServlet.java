@@ -59,13 +59,15 @@
 /*    */   
 /*    */   public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 /* 61 */     response.setCharacterEncoding("utf-8");
+
 /*    */     
 /* 63 */     String tableId = request.getParameter("tableId");
 /*    */     
 /* 65 */     String dishesName = request.getParameter("dishesName");
+    System.out.println("dishesName"+dishesName);
 /*    */     
-/* 67 */     dishesName = new String(dishesName.getBytes("iso8859-1"), "utf-8");
-/*    */     
+/* 67 */     //dishesName = new String(dishesName.getBytes("iso8859-1"), "utf-8");
+/*    */     System.out.println("dishesName2"+dishesName);
 /* 69 */     MessageProducer producer = new MessageProducer();
 /*    */     
 /* 71 */     ArrayList<String> list = GetRTDishesServlet.disheses;
@@ -83,7 +85,3 @@
 /*    */ }
 
 
-/* Location:              C:\Users\xgx\Desktop\点餐系统\apache-tomcat-9.0.64\webapps\OrderSys\WEB-INF\classes\!\com\chinasofti\ordersys\servlets\kitchen\DishesDoneServlet.class
- * Java compiler version: 8 (52.0)
- * JD-Core Version:       1.1.3
- */

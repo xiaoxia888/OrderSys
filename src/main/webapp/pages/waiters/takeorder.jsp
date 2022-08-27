@@ -47,6 +47,7 @@
 		if (responseTxt != "Org_EricYang_Platform_ErrorMsg:ServerPush_Wait_TimeOut") {
 			var msg = document.getElementById("msg");
 
+			/*console.log("re1:"+responseTxt)*/
 			msg.innerHTML = responseTxt;
 			
 		}
@@ -57,6 +58,8 @@
 	function dishesCallback(responseTxt, obj) {
 		if (responseTxt != "Org_EricYang_Platform_ErrorMsg:ServerPush_Wait_TimeOut") {
 			var msg = document.getElementById("msg");
+
+			console.log("re2:"+responseTxt)
 			msg.innerHTML = responseTxt;
 			
 		}
@@ -161,7 +164,7 @@
 					+ recommend
 					+ ",\""
 					+ dishesImg
-					+ "\")> <img class='img-thumbnail'	style='border-radius:20px;width:95%;height:200px' alt='Generic placeholder thumbnail' src='img/dishes/"
+					+ "\")> <img class='img-thumbnail'	style='border-radius:20px;width:95%;height:200px' alt='Generic placeholder thumbnail' src='img.order?path=D:/store/img/dishes/"
 					+ dishesImg + "'></a>";
 			newLine += "<h4>" + subRecommend + dishesName + "</h4>";
 			newLine += "<span class='text-muted'>" + subDiscript + "</span>";
@@ -201,7 +204,7 @@
 		var dishesPrice = document.getElementById("dishesPrice");
 		var recommend = document.getElementById("recommend");
 		var dishesImg = document.getElementById("dishesImg");
-		dishesImg.src = "img/dishes/" + img;
+		dishesImg.src = "img.order?path=D:/store/img/dishes/" + img;
 		dishesName.innerHTML = name;
 		dishesDiscript.innerHTML = disc;
 		dishesTxt.innerHTML = txt;
